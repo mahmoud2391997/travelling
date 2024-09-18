@@ -34,8 +34,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section className="bg-white flex flex-col ml-[5%] mt-[9%] w-[90%] h-screen">
-        <div className="flex flex-col w-[40%]  h-[19%] justify-between">
+      <section className="bg-white flex flex-col ml-[5%]  w-[90%] h-screen">
+        <div className="flex flex-col w-[40%]  h-[19%] justify-between mt-[5%]">
           <h3>TESTIMONIAL</h3>
           <h1 className=" text-[60px] font-semibold">What our client say</h1>
           <p className="w-[60%]">
@@ -296,6 +296,101 @@ export default function Home() {
                 Before we define any approach, we need to deline the brands
                 overall goal. We then need to dive.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="w-full h-screen relative">
+        <div
+          className="w-full h-[663px] bg-cover bg-center flex justify-center"
+          style={{ backgroundImage: "url('/unsplash.png')" }}
+        >
+          <div className="w-[34%] h-[117.5px] mt-[100px] text-white">
+            <h1 className="text-[60px] font-bold">Why choose Us?</h1>
+            <p>our services have been trusted by world travelers.</p>
+          </div>
+        </div>
+        <div className="w-[65%] h-[50%] grid grid-cols-3 gap-[10%] absolute top-[40%] left-[17%]">
+          <div className="w-full h-full rounded-md bg-white p-4">
+            <div className=" flex flex-col items-start justify-around h-full">
+              <Image width={100} height={100} src={"/Group 31.png"} alt="" />
+              <h3 className="font-semibold text-[24px]">Best Service</h3>
+              <p className="font-medium text-[18px]">
+                our service is reliable and convenient, our service is quality.
+              </p>
+              <button className="flex flex-start items-center">
+                <span className="mr-1">Learn more</span>
+                <svg
+                  width="31"
+                  height="13"
+                  viewBox="0 0 31 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M30.6518 6.63269L20.6518 0.859188V12.4062L30.6518 6.63269ZM0.976196 7.63269H21.6518V5.63269H0.976196V7.63269Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className="w-full h-full rounded-md bg-white p-4">
+            <div className=" flex flex-col items-start justify-around h-full">
+              <Image
+                width={100}
+                height={100}
+                src={"/Group 31 (1).png"}
+                alt=""
+              />
+              <h3 className="font-semibold text-[24px]">Best Service</h3>
+              <p className="font-medium text-[18px]">
+                our service is reliable and convenient, our service is quality.
+              </p>
+              <button className="flex flex-start items-center">
+                <span className="mr-1">Learn more</span>
+                <svg
+                  width="31"
+                  height="13"
+                  viewBox="0 0 31 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M30.6518 6.63269L20.6518 0.859188V12.4062L30.6518 6.63269ZM0.976196 7.63269H21.6518V5.63269H0.976196V7.63269Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className="w-full h-full rounded-md bg-white p-4">
+            <div className=" flex flex-col items-start justify-around h-full">
+              <Image
+                width={100}
+                height={100}
+                src={"/Group 31 (2).png"}
+                alt=""
+              />
+              <h3 className="font-semibold text-[24px]">Best Service</h3>
+              <p className="font-medium text-[18px]">
+                our service is reliable and convenient, our service is quality.
+              </p>
+              <button className="flex flex-start items-center">
+                <span className="mr-1">Learn more</span>
+                <svg
+                  width="31"
+                  height="13"
+                  viewBox="0 0 31 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M30.6518 6.63269L20.6518 0.859188V12.4062L30.6518 6.63269ZM0.976196 7.63269H21.6518V5.63269H0.976196V7.63269Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
