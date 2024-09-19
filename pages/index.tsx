@@ -19,7 +19,7 @@ export default function Home() {
         className="w-full h-screen bg-black bg-no-repeat bg-cover relative"
         style={{ backgroundImage: "url('/image.png')" }}
       >
-        <div className=" w-full  text-white absolute top-[30%]">
+        <div className=" w-full  text-white absolute top-[29%]">
           <div className="w-[50%]  ml-[15%] text-5xl xl:text-[90px] font-bold">
             Make in
             <br /> your journey.
@@ -296,7 +296,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full md:h-screen h-[1200px] relative">
+      <section className="w-full md:h-screen sm:h-[800px] h-[1200px] relative">
         <div
           className="w-full h-full bg-cover bg-center flex justify-center"
           style={{ backgroundImage: "url('/unsplash.png')" }}
