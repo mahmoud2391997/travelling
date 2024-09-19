@@ -19,26 +19,22 @@ export default function Home() {
         className="w-full h-screen bg-black bg-no-repeat bg-cover relative"
         style={{ backgroundImage: "url('/image.png')" }}
       >
-        <div className=" w-full  text-white absolute top-[30%]">
+        <div className=" w-full  text-white absolute top-[25%]">
           <div className="w-[40%]  ml-[15%] text-[90px] font-bold">
             Make in
             <br /> your journey.
           </div>
           <div className="w-[29%] ml-[15%] mt-10 text-[18px]">
-            Explore the world with what you love beautiful
-            <br /> natural beauty.
+            Explore the world with what you love beautiful natural beauty.
           </div>
-          <div className="w-[29%] ml-[15%] mt-10 text-[22px]">
-            <span className="font-bold ml-1">Popular Place :</span>
-            Bali, Istanbul, Rome, Paris.
-          </div>
+       
         </div>
       </div>
       <section className="bg-white flex flex-col ml-[5%]  w-[90%] h-screen">
-        <div className="flex flex-col w-[40%]  h-[19%] justify-between mt-[5%]">
+        <div className="flex flex-col w-[40%]  h-[19%] justify-between mt-[2%]">
           <h3>TESTIMONIAL</h3>
           <h1 className=" text-[60px] font-semibold">What our client say</h1>
-          <p className="w-[60%]">
+          <p className="w-full">
             Create a visual identity for your company and a overall brand
           </p>
         </div>
@@ -302,7 +298,7 @@ export default function Home() {
       </section>
       <section className="w-full h-screen relative">
         <div
-          className="w-full h-[663px] bg-cover bg-center flex justify-center"
+          className="w-full h-full bg-cover bg-center flex justify-center"
           style={{ backgroundImage: "url('/unsplash.png')" }}
         >
           <div className="w-[34%] h-[117.5px] mt-[100px] text-white">
