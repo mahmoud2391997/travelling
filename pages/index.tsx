@@ -19,8 +19,8 @@ export default function Home() {
         className="w-full h-screen bg-black bg-no-repeat bg-cover relative"
         style={{ backgroundImage: "url('/image.png')" }}
       >
-        <div className=" w-full  text-white absolute top-[25%]">
-          <div className="w-[40%]  ml-[15%] text-[90px] font-bold">
+        <div className=" w-full  text-white absolute top-[30%]">
+          <div className="w-[50%]  ml-[15%] text-5xl xl:text-[90px] font-bold">
             Make in
             <br /> your journey.
           </div>
@@ -30,15 +30,15 @@ export default function Home() {
        
         </div>
       </div>
-      <section className="bg-white flex flex-col ml-[5%]  w-[90%] h-screen">
-        <div className="flex flex-col w-[40%]  h-[19%] justify-between mt-[2%]">
+      <section className="bg-white flex flex-col ml-[5%]  w-[90%] h-auto lg:h-screen">
+        <div className="flex flex-col lg:w-[40%] md:w-[90%] h-[19%] justify-between my-[2%]">
           <h3>TESTIMONIAL</h3>
           <h1 className=" text-[60px] font-semibold">What our client say</h1>
           <p className="w-full">
             Create a visual identity for your company and a overall brand
           </p>
         </div>
-        <div className="grid grid-cols-3 w-[88.88%] m-auto gap-[5%] h-[48%]">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:w-[88.88%] md:w-full m-auto gap-[5%] h-[1200px] sm:h-[800px]  lg:h-[48%]">
           <div className="w-full flex flex-col items-center justify-around h-full">
             <div className="flex flex-col items-center justify-between h-2/5">
               <Image width={100} height={100} src={"/client 1.png"} alt="" />
@@ -296,17 +296,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-screen relative">
+      <section className="w-full md:h-screen h-[1200px] relative">
         <div
           className="w-full h-full bg-cover bg-center flex justify-center"
           style={{ backgroundImage: "url('/unsplash.png')" }}
         >
-          <div className="w-[34%] h-[117.5px] mt-[100px] text-white">
-            <h1 className="text-[60px] font-bold">Why choose Us?</h1>
-            <p>our services have been trusted by world travelers.</p>
+          <div className="sm:w-[500px] w-full h-[117.5px] mt-[100px] text-white flex flex-col items-center">
+            <h1 className="sm:text-[60px] text-2xl font-bold">Why choose Us?</h1>
+            <p className="text-center mt-5">our services have been trusted by world travelers.</p>
           </div>
-        </div>
-        <div className="w-[65%] h-[50%] grid grid-cols-3 gap-[10%] absolute top-[40%] left-[17%]">
+        <div className="lg:w-[70%] w-[90%] left-[5%] h-[50%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[10%] absolute top-[20%] md:top-[40%] lg:left-[17%]">
           <div className="w-full h-full rounded-md bg-white p-4">
             <div className=" flex flex-col items-start justify-around h-full">
               <Image width={100} height={100} src={"/Group 31.png"} alt="" />
@@ -326,7 +325,7 @@ export default function Home() {
                   <path
                     d="M30.6518 6.63269L20.6518 0.859188V12.4062L30.6518 6.63269ZM0.976196 7.63269H21.6518V5.63269H0.976196V7.63269Z"
                     fill="black"
-                  />
+                    />
                 </svg>
               </button>
             </div>
@@ -367,7 +366,7 @@ export default function Home() {
                 height={100}
                 src={"/Group 31 (2).png"}
                 alt=""
-              />
+                />
               <h3 className="font-semibold text-[24px]">Best Service</h3>
               <p className="font-medium text-[18px]">
                 our service is reliable and convenient, our service is quality.
@@ -390,6 +389,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+                  </div>
       </section>
     </div>
   );
