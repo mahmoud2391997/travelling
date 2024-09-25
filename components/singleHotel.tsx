@@ -36,7 +36,7 @@ const SingleHotel: React.FC<hotelProp> = ({ hotel, individuals, days }) => {
           <span>{hotel.price * individuals * days}$</span>
         </div>
         <button className="bg-blue-600 h-10 w-40 rounded text-white">
-          see availability
+          Register
         </button>
       </div>
     </div>
