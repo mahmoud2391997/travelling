@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import { Sniglet } from "next/font/google";
@@ -13,7 +13,8 @@ interface destinationProp {
 }
 const SingleTour: React.FC<destinationProp> = ({ data, data2 }) => {
   console.log(data2);
-
+  const [individual, setIndividual] = useState(1);
+  const [day, setDay] = useState(1);
   return (
     <div className="w-full h-auto">
       <section className="h-screen w-full relative flex justify-center items-center">
@@ -31,34 +32,39 @@ const SingleTour: React.FC<destinationProp> = ({ data, data2 }) => {
           </span>
         </div>
       </section>
-      <div className="w-full h-auto flex justify-center items-center ">
-        <div className="w-[550px] h-7 bg-orange-300 flex justify-between  border-4 border-orange-300">
+      <div className="w-full h-auto flex justify-center items-center my-10">
+        <div className="w-[200px] h-7 bg-orange-300 flex justify-between  border-4 border-orange-300">
           <div className="bg-white flex items-center">
-            <span className="border border-orange-300 ">
-              number of individuals:
-            </span>
+            <span className="border border-orange-300 ">Individuals:</span>
 
             <input
               type="number"
-              className="w-28 border border-orange-300"
-              placeholder="Individuals"
+              className="w-10 border border-orange-300"
+              value={individual}
+              onChange={(e) => {
+                setIndividual(+e.target.value);
+              }}
+              min={1}
             />
           </div>
           <div className="bg-white flex items-center">
-            <span className="border border-orange-300">number of days:</span>
+            <span className="border border-orange-300">Days:</span>
             <input
               type="number"
-              className="border border-orange-300 w-16"
-              placeholder="Days"
+              className="border border-orange-300 w-10"
+              value={day}
+              onChange={(e) => {
+                setDay(+e.target.value);
+              }}
+              min={1}
             />
           </div>
-          <button className="bg-white">Search</button>
         </div>
       </div>
       <section>
         <div className="m-auto w-[50%] h-auto">
           {data2.map((hotel) => (
-            <SingleHotel hotel={hotel} />
+            <SingleHotel hotel={hotel} individuals={individual} days={day} />
           ))}
         </div>
       </section>

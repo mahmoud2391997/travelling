@@ -4,12 +4,15 @@ interface hotelProp {
     name: string;
     rating: number;
     price: number;
+    image: string;
   };
+  individuals: number;
+  days: number;
 }
-const SingleHotel: React.FC<hotelProp> = ({ hotel }) => {
+const SingleHotel: React.FC<hotelProp> = ({ hotel, individuals, days }) => {
   return (
     <div className="w-full flex my-5">
-      <Image width={300} height={300} src={"/hotel.jpg"} alt="" />
+      <Image width={300} height={300} src={hotel.image} alt="" />
       <div className="w-[70%] flex justify-between items-end flex-col p-3">
         <div className=" w-full flex justify-between">
           <span>Hotel: {hotel.name}</span>{" "}
@@ -27,7 +30,10 @@ const SingleHotel: React.FC<hotelProp> = ({ hotel }) => {
           </div>
         </div>
         <div className=" w-full flex justify-between">
-          <span>2 Individuals For 2 Days:</span> <span>{hotel.price}$</span>
+          <span>
+            {individuals} Individual For {days} Day:
+          </span>{" "}
+          <span>{hotel.price * individuals * days}$</span>
         </div>
         <button className="bg-blue-600 h-10 w-40 rounded text-white">
           see availability
