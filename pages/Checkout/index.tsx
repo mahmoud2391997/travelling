@@ -1,4 +1,36 @@
+import axios from "axios";
+import { useRouter } from "next/router";
+
 export default function Checkout() {
+  const router = useRouter();
+  const { query } = router;
+  const hotel = query.hotel;
+  const price = query.price;
+  const individuals = query.individuals;
+  const days = query.days;
+  console.log(hotel);
+  console.log(price);
+  console.log(individuals);
+  console.log(days);
+  function getTotal(price: number, days: number, individuals: number) {
+    return price * days * individuals;
+  }
+  function stripePayment() {
+    axios
+      .post(`https://silly-funny-lint.glitch.me/api/create-checkout-session`, {
+        stay: `${days} day for ${individuals} person in ${hotel} `,
+        total: getTotal(
+          price ? +price : 0,
+          days ? +days : 0,
+          individuals ? +individuals : 0
+        ),
+      })
+      .then((response) => (window.location.href = response.data))
+
+      .catch((error) => {
+        throw error;
+      });
+  }
   return (
     <div className="pt-36">
       <h2 className="m-auto my-10 racking-wider text-3xl font-thin w-[35%] text-start">
@@ -40,24 +72,31 @@ export default function Checkout() {
           <tbody className="h-full ">
             <tr className="border-b-1 border-black">
               <td>Hotel Name</td>
-              <td>asdasdasd</td>
+              <td>{hotel}</td>
             </tr>
 
             <tr className="border-b-1 border-black">
               <td>Price For Individual Per Day</td>
-              <td>20$</td>
+              <td>{price}$</td>
             </tr>
             <tr className="border-b-1 border-black">
               <td>Number Of Individuals</td>
-              <td>5</td>
+              <td>{individuals}</td>
             </tr>
             <tr className="border-b-1 border-black">
               <td>Number Of Days</td>
-              <td>5</td>
+              <td>{days}</td>
             </tr>
             <tr className="border-b-1 border-black">
               <td>Total</td>
-              <td>500$</td>
+              <td>
+                {getTotal(
+                  price ? +price : 0,
+                  days ? +days : 0,
+                  individuals ? +individuals : 0
+                )}
+                $
+              </td>
             </tr>
           </tbody>
         </table>
@@ -65,6 +104,9 @@ export default function Checkout() {
         <button
           className="button home  border-[#120B0B] border-2 w-52 h-12 text-black mt-10 mb-20 m-auto"
           id="home"
+          onClick={() => {
+            stripePayment();
+          }}
         >
           BOOK AND PAY WITH STRIPE
         </button>

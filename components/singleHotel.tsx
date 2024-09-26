@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 interface hotelProp {
   hotel: {
     name: string;
@@ -35,9 +36,13 @@ const SingleHotel: React.FC<hotelProp> = ({ hotel, individuals, days }) => {
           </span>{" "}
           <span>{hotel.price * individuals * days}$</span>
         </div>
-        <button className="bg-blue-600 h-10 w-40 rounded text-white">
-          Register
-        </button>
+        <Link
+          href={`/checkout?hotel=${hotel.name}&price=${hotel.price}&individuals=${individuals}&days=${days}`}
+        >
+          <button className="bg-blue-600 h-10 w-40 rounded text-white">
+            Register
+          </button>
+        </Link>
       </div>
     </div>
   );
