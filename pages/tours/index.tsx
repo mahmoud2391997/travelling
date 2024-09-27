@@ -42,7 +42,9 @@ export const Tours: React.FC<destinationsProps> = ({ data }) => {
               destination: string;
               price: number;
             }) => (
-              <Link href={`tours/${destination._id}`}>
+              <Link
+              key={destination._id}
+              href={`tours/${destination._id}`}>
                 <TourCard
                   image={destination.image}
                   name={destination.destination}
