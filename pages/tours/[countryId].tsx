@@ -62,9 +62,14 @@ const SingleTour: React.FC<destinationProp> = ({ data, data2 }) => {
         </div>
       </div>
       <section>
-        <div className="m-auto w-[50%] h-auto">
+        <div className="m-auto xl:w-[60%] md:w-full w-[300px] h-auto">
           {data2.map((hotel) => (
-            <SingleHotel hotel={hotel} individuals={individual} days={day} />
+            <SingleHotel
+              hotel={hotel}
+              individuals={individual}
+              days={day}
+              destination={data.destination}
+            />
           ))}
         </div>
       </section>

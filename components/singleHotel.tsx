@@ -9,15 +9,21 @@ interface hotelProp {
   };
   individuals: number;
   days: number;
+  destination: string;
 }
-const SingleHotel: React.FC<hotelProp> = ({ hotel, individuals, days }) => {
+const SingleHotel: React.FC<hotelProp> = ({
+  hotel,
+  individuals,
+  days,
+  destination,
+}) => {
   return (
-    <div className="w-full flex my-5">
+    <div className="w-full  md:flex flex-col md:flex-row my-5">
       <Image width={300} height={300} src={hotel.image} alt="" />
-      <div className="w-[70%] flex justify-between items-end flex-col p-3">
+      <div className="md:w-[70%] w-[300px] flex  justify-between items-end flex-col p-3">
         <div className=" w-full flex justify-between">
           <span>Hotel: {hotel.name}</span>{" "}
-          <div className="flex">
+          <div className="flex border border-blue-600 rounded">
             <span>
               {hotel.rating * 2 > 9
                 ? "Excellent"
@@ -25,7 +31,7 @@ const SingleHotel: React.FC<hotelProp> = ({ hotel, individuals, days }) => {
                 ? "Very Good"
                 : "Good"}
             </span>{" "}
-            <div className="w-7 h-5 bg-blue-600 rounded flex justify-center items-center ml-3 text-white">
+            <div className="w-7 max-h-4 bg-blue-600 rounded flex justify-center items-center ml-3 my-auto text-white">
               {hotel.rating * 2}
             </div>
           </div>
@@ -37,7 +43,7 @@ const SingleHotel: React.FC<hotelProp> = ({ hotel, individuals, days }) => {
           <span>{hotel.price * individuals * days}$</span>
         </div>
         <Link
-          href={`/checkout?hotel=${hotel.name}&price=${hotel.price}&individuals=${individuals}&days=${days}`}
+          href={`/checkout?location=${destination}&hotel=${hotel.name}&price=${hotel.price}&individuals=${individuals}&days=${days}`}
         >
           <button className="bg-blue-600 h-10 w-40 rounded text-white">
             Register
