@@ -41,7 +41,7 @@ export default function Checkout() {
   }
   return (
     <form
-      className="pt-36"
+      className="py-36"
       onSubmit={(e) => {
         e.preventDefault();
         stripePayment();

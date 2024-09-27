@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
-import { Sniglet } from "next/font/google";
 import SingleHotel from "@/components/singleHotel";
 interface destinationProp {
   data: {

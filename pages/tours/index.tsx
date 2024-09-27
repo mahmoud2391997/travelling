@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
-import axios from "axios";
+
 import { GetServerSideProps } from "next";
 import TourCard from "@/components/singleTour";
 import Link from "next/link";
